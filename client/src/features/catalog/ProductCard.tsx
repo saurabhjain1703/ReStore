@@ -44,16 +44,30 @@ export default function ProductCard({ product }: Props) {
           </Typography>
         </CardContent>
         <CardActions>
-          
+          <Button
+            variant="contained"
+            component={Link}
+            to={`/catalog/${product.id}`}
+            size="small"
+          >
+            VIEW
+          </Button>
+          <Button
+            variant="contained"
+            component={Link}
+            to={`/catalog/${product.id}`}
+            size="small"
+          >
+            ADD TO CART
+          </Button>
+
           {/* <Fab variant="extended" size="small" color="primary" sx={{marginInlineEnd:"auto"}}>
             VIEW
           </Fab> */}
-          <Button component={Link} to={`/catalog/${product.id}`} size='small'>
-            VIEW
-          </Button>
-          <Fab variant="extended" size="small" color="primary" >
+
+          {/* <Fab variant="extended" size="small" color="primary" >
             ADD TO CART
-          </Fab>
+          </Fab> */}
         </CardActions>
       </Card>
     </>
